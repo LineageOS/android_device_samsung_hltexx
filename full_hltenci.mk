@@ -25,7 +25,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from hlte device
-$(call inherit-product, device/samsung/hltexx/device.mk)
+$(call inherit-product, device/samsung/hltenci/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_hltexx
@@ -33,3 +33,6 @@ PRODUCT_DEVICE := hltexx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := SM-N9005
+
+PRODUCT_COPY_FILES += \
+    device/samsung/hltenci/variant.sh:system/bin/variant.sh
