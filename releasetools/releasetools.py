@@ -1,5 +1,5 @@
-#
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2012 The Android Open Source Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,9 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+#
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/hltenci/hltenci-vendor.mk)
+"""Custom OTA commands for d2lte devices"""
 
-# Inherit from hltexx
-$(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
+def FullOTA_InstallEnd(info):
+  info.script.AppendExtra('run_program("/system/bin/variant.sh");')
+  info.script.AppendExtra('delete("/system/bin/variant.sh");')
