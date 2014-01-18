@@ -15,10 +15,7 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/hltexx/hltexx-vendor.mk)
-
-## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/hltexx/overlay-gsm
+$(call inherit-product-if-exists, vendor/samsung/hltenci/hltenci-vendor.mk)
 
 # Inherit from hltexx
 $(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
