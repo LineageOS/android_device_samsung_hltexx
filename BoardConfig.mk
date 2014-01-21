@@ -28,5 +28,5 @@
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr
-#set your kernel config here ATTENTION
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlteeur_defconfig
+
+TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
