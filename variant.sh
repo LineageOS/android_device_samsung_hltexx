@@ -25,14 +25,12 @@ if [[ $CMDLINE != "${CMDLINE/SM-N900P}" ]]; #hltespr
        sed -i 's|ro.build.description=xxxxxxxxxx|ro.build.description=hltespr-user 4.3 JSS15J N900PVPUBMJ4 release-keys|g' /system/build.prop
        sed -i 's|ro.product.model=hlte|ro.product.model=SM-N900P|g' /system/build.prop
        sed -i 's|ro.product.device=hlte|ro.product.device=hltespr|g' /system/build.prop
-       sed -i 's|ro.cm.device=hlte|ro.cm.device=hltespr|g' /system/build.prop
        cp -R /system/lib/cdma/* /system/lib
 elif [[ $CMDLINE != "${CMDLINE/SM-N9005}" ]]; #hltexx
     then
        sed -i 's|ro.build.fingerprint=xxxxxxxxxx|ro.build.fingerprint=samsung/hltexx/hlte:4.3/JSS15J/N9005XXUBMH1:user/release-keys|g' /system/build.prop
        sed -i 's|ro.build.description=xxxxxxxxxx|ro.build.description=hltexx-user 4.3 JSS15J N9005XXUBMH1 release-keys|g' /system/build.prop
        sed -i 's|ro.product.model=hlte|ro.product.model=SM-N9005|g' /system/build.prop
-       sed -i 's|ro.cm.device=hlte|ro.cm.device=hltexx|g' /system/build.prop
        cp -R /system/lib/gsm/* /system/lib
 fi
 chmod 644 /system/build.prop
