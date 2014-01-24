@@ -24,9 +24,9 @@
 -include device/samsung/hlte-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/hltenci/BoardConfigVendor.mk
+-include vendor/samsung/hlte/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr
+TARGET_OTA_ASSERT_DEVICE := hltexx,hltespr,hltetmo,SM-N900T,hltecan,hlteatt,hltevzw,hlte
 
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hlte_eur_defconfig
